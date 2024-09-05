@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayMax</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+</head>
+<body>
+    <header id="head" class=" font-[Poppins] bg-black  md:h-[12vh] md:rounded-br-4xl">
+        
+       <input id="search" type="search"  placeholder="
+       Search for games,console,accessories and more... " class="rounded-md border border-2 absolute md:me-[2rem] left-[24%] z-20 w-[116vh] h-[2.3rem] mt-[1rem] text-[1.3rem] placeholder:text-black">
+       
+       
+                  <!-- <i class="fa-solid fa-cart-shopping text-[1.6rem] mt-[-5rem]"></i>
+                  <i class="fa-solid fa-user text-[1.6rem] mt-[-5rem] ms-[-1.6rem]"></i> -->
+       
+        <nav class=" bg-black flex justify-between items-center w-[92%]  mx-0 h-16 w-full px-2 md:static top-0 z-10">
+            <div class="image-container w-28">
+                 <img src="./images/logo.png" alt="" class=" object-contain md:ms-[1rem] mt-[2rem]" id="logo">
+            </div>
+            
+            <div
+                class="nav-links duration-500 md:static absolute bg-black md:min-h-fit left-0 top-[-100%] md:w-auto  w-full flex items-center px-5 rounded-b-3xl z-10" id="links">
+                
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-white mt-[5rem] text-[1.1rem]">
+                    <li>
+                        <a class="hover:text-yellow-500" href="#PlayStation">PLAYSTATION</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-yellow-500" href="#Xbox">XBOX</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-yellow-500" href="#Digital">DIGITAL</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-yellow-500" href="#Accessories">ACCESSORIES</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-yellow-500" href="#Merchandise">MERCHANDISE</a>
+                    </li>
+                    <li>
+                      <a class="hover:text-yellow-500" href="#Pre-order">PREORDER</a>
+                  </li>
+                  
+                </ul>
+                
+            </div>
+            <div class="flex items-center gap-0">
+                     
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden pl-5 text-white"></ion-icon>
+            </div>
+        </nav>
+    </header>
+    <div class="bg-green-200 w-full h-[100vh]" id="BG">
+        <i class="fa-solid fa-heart md:absolute text-white ms-[86%] top-[1.3rem] text-[1.8rem] hover:text-red-600" id="icon"></i>
+        <i class="fa-solid fa-cart-shopping md:absolute text-white ms-[89.5%] top-[1.3rem] text-[1.8rem] hover:text-orange-600" id="icon"></i>
+        <i class="fa-solid fa-user md:absolute text-white ms-[93%] top-[1.3rem] text-[1.8rem] hover:text-blue-500" id="icon"></i>
+        <i class="fa-solid fa-ellipsis-vertical md:absolute text-white ms-[98%] top-[1.3rem] text-[1.8rem]" id="more"></i>
+        <img src="./images/black-myth-wukong-HD-scaled.jpg" alt="" class="w-full object-fill h-[30vh] md:h-[100vh]">
+        <div class="hidden w-[18vh] h-[17vh] bg-gray-400 absolute top-[12%] left-[89%] text-white rounded-b-3xl " id="div-to-display">
+            <a class="text-[1.2rem] ms-[25%] cursor-pointer" href="#BG">Home</a>
+            <a class="block text-[1.2rem] ms-[25%]" href="#Contact">Contact</a>
+            <a class="block text-[1.2rem] ms-[25%]" href="#Pre-order" >Pre-Order</a>
+            <a class="block text-[1.2rem] ms-[25%]">Consoles</a>
+          </div>
+        <div class=" text-white w-[70vh] h-[50vh] absolute md:bottom-[-10%] left-[10%]" id="bgcont">
+            <h1 class="md:text-[2rem] ps-[1rem] py-[1rem]">NEW ARRIVAL</h1>
+            <p class="text-justify md:ps-[1rem] pe-[2rem] text-[1.2rem]">Embark on a fantastical journey through ancient Chinese mythology in Black Myth: Wukong, a action-packed RPG inspired by the classic novel 'Journey to the West'.</p>
+            <button  class=" bg-yellow-800 rounded-3xl hover:border hover:border-white hover:bg-transparent md:ms-[1rem] mt-[2rem] px-[1rem]  py-[0.5rem] text-[1.3rem]">Purchase Now</button>
+        </div>
+    </div>
+    <section class="bg-black" >
+        <div class="grid md:grid-rows-2 grid-flow-col mx-[3%] py-[2rem] gap-x-[1rem] gap-y-[1.5rem]" id="sec2">
+            <div class=" rounded-3xl hover:shadow hover:shadow-[color:#FFFFFF] hover:shadow-r shadow-b border border-white md:col-span-2 h-[40vh] w-[90vh]" id="cons">
+                <img src="./images/console.png" alt="" class=" rounded-3xl object-cover md:h-[25vh] ms-[58%] mt-[3rem]">
+                <h1 class=" text-white md:mt-[-25%] ms-[3rem] text-[2.2rem] font-bold">Gaming<span class="block"> Console</span></h1>
+            </div>
+            <div class=" rounded-3xl hover:shadow hover:shadow-[color:#FFFFFF] hover:shadow-r shadow-b border border-white md:h-[40vh] w-[60vh]" id="merc">
+                <img src="./images/merchandise.png" alt="" class="md:h-[25vh] ms-[30%] mt-[5rem]">
+                <h1 class="text-white md:mt-[-55%] text-center text-[2.2rem] font-bold">Merchandise</h1>
+            </div>
+            <div class=" rounded-3xl hover:shadow hover:shadow-[color:#FFFFFF] hover:shadow-r shadow-b border border-white md:h-[40vh] w-[60vh]" id="digi">
+                <img src="./images/digital.png" alt="" class="md:h-[25vh] ms-[30%] mt-[5rem]">
+                <h1 class="text-white md:mt-[-55%] text-center text-[2.2rem] font-bold">Digital</h1>
+            </div>
+            <div class=" rounded-3xl hover:shadow hover:shadow-[color:#FFFFFF] hover:shadow-r shadow-b border border-white md:col-span-2 h-[40vh] w-[90vh] ms-[-33.3%]" id="gam">
+                <img src="./images/games.png" alt="" class=" rounded-3xl object-cover md:h-[25vh] ms-[58%] mt-[3rem]">
+                <h1 class=" text-white md:mt-[-25%] ms-[3rem] text-[2.2rem] font-bold">Games</h1>
+            </div>
+            
+            <div class=" rounded-3xl hover:shadow hover:shadow-[color:#FFFFFF] hover:shadow-r shadow-b border border-white md:h-[40vh] w-[60vh]" id="acc">
+                <img src="./images/accessories.png" alt="" class="md:h-[25vh] ms-[30%] mt-[5rem]">
+                <h1 class="text-white md:mt-[-55%] text-center text-[2.2rem] font-bold">Accessories</h1>
+            </div>
+        </div>
+    </section>
+    <section id="PlayStation">    <!-- Play Station-->
+    <div class="bg-[#1355e1] w-full"><img src="./images/playstation-ps5-ps4-logo-free-free-vector.jpg" alt="" class="object-cover m-auto md:w-[35vh]" id="play">
+    </div>
+                   
+    <div class="max-w-[100vw] mx-auto bg-black mt-0">
+    
+                    <div id="default-carousel" class="relative" data-carousel="static">
+                     
+                        <div class="overflow-hidden relative h-[11rem] sm:h-64 xl:h-80 2xl:h-[80vh]">
+                           
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                               
+                                <img src="./images/cricket.png" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 opacity-[0.7] " alt="..." id="image">
+                                <h1 class="absolute text-white md:text-[3rem] left-[8%] top-[10%] font-semibold">BEST SELLER</h1>
+                                <h3 class="absolute text-white md:left-[25%] top-[30%] text-[1.6rem]">Cricket 24<span class="block md:pt-[0.5rem] text-[1.2rem]">PLATFORM:PS5</span></h3>
+                                <p class="absolute text-white md:left-[25%] top-[40%] text-[1.2rem] pt-[2rem] pr-[5%]">Cricket 24 is the culmination of a decade of cricket video game development and includes teams from every corner of the globe.</p>
+                                <button class="absolute text-white rounded-md border border-white hover:text-[#BBF712]  md:left-[25%] top-[60%] px-[1rem] text-[1.5rem]">WATCH TRAILER</button>
+                                <div class="absolute md:w-[30vh] h-[36vh] left-[8%] top-[25%]">
+                                    <img src="./images/cri.jpg" alt="" class="md:w-[30vh] h-[36vh]">
+                                </div>
+                            </div>
+                           
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="./images/final.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 opacity-[0.7]" alt="..." id="image">
+                                <h1 class="absolute text-white md:text-[3rem] left-[8%] top-[10%] font-semibold">BEST SELLER</h1>
+                                <h3 class="absolute text-white md:left-[25%] top-[30%] text-[1.6rem]">Final Fantasy VII Rebirth<span class="block md:pt-[0.5rem] text-[1.2rem]">PLATFORM:PS5</span></h3>
+                                <p class="absolute text-white md:left-[25%] top-[40%] text-[1.2rem] pt-[2rem] pr-[8%]">FINAL FANTASY VII REBIRTH is the highly anticipated new story in the FINAL FANTASY VII remake project, a reimagining of the icoic original game into three standalone titles by its original creators.</p>
+                                <button class="absolute text-white rounded-md border border-white hover:text-[#BBF712]  md:left-[25%] top-[60%] px-[1rem] text-[1.5rem]">WATCH TRAILER</button>
+                                <div class=" absolute md:w-[30vh] h-[36vh] left-[8%] top-[25%]">
+                                    <img src="./images/VII.jpg" alt="" class="md:w-[30vh] h-[36vh]">
+                                </div>
+                            </div>
+                           
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="./images/gta5_DscbSyB.png" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 scale-x-[-1] opacity-[0.7]" alt="..." id="image">
+                                <h1 class="absolute text-white md:text-[3rem] left-[8%] top-[10%] font-semibold">BEST SELLER</h1>
+                                <h3 class="absolute text-white md:left-[25%] top-[30%] text-[1.6rem]">Grand Theft Auto V<span class="block md:pt-[0.5rem] text-[1.2rem]">PLATFORM:PS5</span></h3>
+                                <p class="absolute text-white md:left-[25%] top-[40%] text-[1.2rem] pt-[2rem] pr-[8%]">Grand Theft Auto V (GTA V) is an open-world action-adventure game set in the fictional city of Los Santos, where three playable protagonists <span class="hidden md:inline">- Michael, Franklin, and Trevor - </span>navigate a complex web of crime, corruption, and redemption.</p>
+                                <button class="absolute text-white rounded-md border border-white hover:text-[#BBF712]  md:left-[25%] top-[60%] px-[1rem] text-[1.5rem]">WATCH TRAILER</button>
+                                <div class="absolute md:w-[30vh] h-[36vh] left-[8%] top-[25%]">
+                                    <img src="./images/gta.jpg" alt="" class="md:w-[30vh] h-[36vh]">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                        </div> -->
+                       
+                        <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev >
+                            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none" id="left">
+                                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                
+                            </span>
+                        </button>
+                        <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 0 group-focus:ring-4 group-focus:ring-white  group-focus:outline-none" id="left">
+                                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                
+                            </span>
+                        </button>
+                    </div>
+    </div>
+             
+            
+        
+    </section>
+    <section id="slide" class="bg-black"> <!-- Play Station Slider-->
+        <div class="slider" reverse="true" style="
+            --width: 200px;
+            --height: 200px;
+            --quantity: 9;
+        ">
+            <div class="list">
+                <div class="item" style="--position: 1"><img src="./images/cri.jpg" alt=""></div>
+                <div class="item" style="--position: 2"><img src="./images/VII.jpg" alt=""></div>
+                <div class="item" style="--position: 3"><img src="./images/gta.jpg" alt=""></div> 
+                <div class="item" style="--position: 4"><img src="./images/pl4.jpg" alt=""></div> 
+                 <div class="item" style="--position: 5"><img src="./images/pl5.jpg" alt=""></div>
+                <div class="item" style="--position: 6"><img src="./images/pl6.jpg" alt=""></div>
+                <div class="item" style="--position: 7"><img src="./images/pl7.jpg" alt=""></div>
+                <div class="item" style="--position: 8"><img src="./images/pl8.jpg" alt=""></div>
+                <div class="item" style="--position: 9"><img src="./images/pl9.jpg" alt=""></div>
+             </div> 
+        </div>
+
+    </section>
+    
+    <section id="Xbox"> <!-- xbox-->
+        <div class="bg-[#0e7b0d] h-[30vh] pt-[3%]" id="xBG"><img src="./images/xbox.png" alt="" class="object-cover m-auto md:w-[30vh]" id="xbox">
+        </div>
+
+        <div class="max-w-[100vw] mx-auto bg-black mt-0">
+    
+            <div id="default-carousel" class="relative" data-carousel="static">
+             
+                <div class="overflow-hidden relative h-[11rem] sm:h-64 xl:h-80 2xl:h-[70vh]">
+                   
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <!-- <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl ">Primer Slide</span> -->
+                        <img src="./images/xbg1.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 opacity-[0.7] " alt="..." id="image">
+                        <h1 class="absolute text-white md:text-[3rem] left-[8%] top-[10%] font-semibold">BEST SELLER</h1>
+                        <h3 class="absolute text-white md:left-[25%] top-[30%] text-[1.6rem]">Mortal Kombat 11<span class="block md:pt-[0.5rem] text-[1.2rem]">PLATFORM:XBOX ONE</span></h3>
+                        <p class="absolute text-white md:left-[25%] top-[40%] text-[1.2rem] pt-[2rem] pr-[5%]">Mortal Kombact is back and better than evere in the next evolution of the iconic franchise.</p>
+                        <button class="absolute text-white rounded-md border border-white hover:text-[#BBF712]  md:left-[25%] top-[60%] px-[1rem] text-[1.5rem]">WATCH TRAILER</button>
+                        <div class="absolute md:w-[30vh] h-[36vh] left-[8%] top-[25%]">
+                            <img src="./images/xl1.jpg" alt="" class="md:w-[30vh] h-[36vh]">
+                        </div>
+                    </div>
+                   
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./images/xbg2.png" class=" block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 opacity-[0.7]" alt="..." id="image">
+                        <h1 class="absolute text-white md:text-[3rem] left-[8%] top-[10%] font-semibold">BEST SELLER</h1>
+                        <h3 class="absolute text-white md:left-[25%] top-[30%] text-[1.6rem]">Assassin's Creed Mirage<span class="block md:pt-[0.5rem] text-[1.2rem]">PLATFORM:Xbox Series X</span></h3>
+                        <p class="absolute text-white md:left-[25%] top-[40%] text-[1.2rem] pt-[2rem] pr-[8%]">Experience the story of Basim, a cunning street thief with nightmarish visions, seeking answers and justice as he navigates the bustling streets of ninth-century Baghdad.</p>
+                        <button class="absolute text-white rounded-md border border-white hover:text-[#BBF712]  md:left-[25%] top-[60%] px-[1rem] text-[1.5rem]">WATCH TRAILER</button>
+                        <div class=" absolute md:w-[30vh] h-[36vh] left-[8%] top-[25%]">
+                            <img src="./images/xl2.jpg" alt="" class="md:w-[30vh] h-[36vh]">
+                        </div>
+                    </div>
+                   
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./images/xbg3.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 scale-x-[-1] opacity-[0.7]" alt="..." id="image">
+                        <h1 class="absolute text-white md:text-[3rem] left-[8%] top-[10%] font-semibold">BEST SELLER</h1>
+                        <h3 class="absolute text-white md:left-[25%] top-[30%] text-[1.6rem]">The Crew Motorfest<span class="block md:pt-[0.5rem] text-[1.2rem]">PLATFORM:XBOX ONE</span></h3>
+                        <p class="absolute text-white md:left-[25%] top-[40%] text-[1.2rem] pt-[2rem] pr-[8%]">The Crew Motorfest is an  open-world racing game set on the island of O'ahu, Hawaii, where players can explore, customize, and race a wide variety of cars, bikes, and other vehicles in a vibrant and dynamic environment.</p>
+                        <button class="absolute text-white rounded-md border border-white hover:text-[#BBF712]  md:left-[25%] top-[60%] px-[1rem] text-[1.5rem]">WATCH TRAILER</button>
+                        <div class="absolute md:w-[30vh] h-[36vh] left-[8%] top-[25%]">
+                            <img src="./images/xl3.jpg" alt="" class="md:w-[30vh] h-[36vh]">
+                        </div>
+                    </div>
+                </div>
+               
+                <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev >
+                    <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none" id="left">
+                        <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        
+                    </span>
+                </button>
+                <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 0 group-focus:ring-4 group-focus:ring-white  group-focus:outline-none" id="left">
+                        <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        
+                    </span>
+                </button>
+            </div>
+        </div>
+        
+
+    </section>
+    <section id="slide" class="bg-black"> <!-- xbox Slider-->
+        <div class="slider" reverse="true" style="
+            --width: 200px;
+            --height: 200px;
+            --quantity: 9;
+        ">
+            <div class="list">
+                <div class="item" style="--position: 1"><img src="./images/xl1.jpg" alt=""></div>
+                <div class="item" style="--position: 2"><img src="./images/xl2.jpg" alt=""></div>
+                <div class="item" style="--position: 3"><img src="./images/xl3.jpg" alt=""></div> 
+                <div class="item" style="--position: 4"><img src="./images/xl4.jpg" alt=""></div> 
+                 <div class="item" style="--position: 5"><img src="./images/xl5.jpg" alt=""></div>
+                <div class="item" style="--position: 6"><img src="./images/xl6.jpg" alt=""></div>
+                <div class="item" style="--position: 7"><img src="./images/xl7.jpg" alt=""></div>
+                <div class="item" style="--position: 8"><img src="./images/xl8.jpg" alt=""></div>
+                <div class="item" style="--position: 9"><img src="./images/xl9.jpg" alt=""></div>
+             </div> 
+        </div>
+
+    </section>
+    <section id="Digital">
+        <div class=" bg-[#0339c1] h-[20vh] md:h-[30vh]"><h1 id="diginame" class="text-center text-white font-light font-serif text-[2rem] md:text-[3rem] pt-[5%]">DIGITAL</h1></div>
+    </section>
+
+    <section id="slide" class="bg-[#0339a5]"> <!-- digital Slider-->
+        <div id="digislide" class="slider" reverse="true" style="
+            --width: 200px;
+            --height: 280px;
+            --quantity: 9;
+        ">
+            <div class="list digi">
+                <h2 class="text-white filter-unset font-semibold text-[1.2rem] md:text-[2rem] py-[1rem] ps-[1.5rem]">PlayStation Store Gift Cards</h2>
+                <div class="item" style="--position: 1"><img src="./images/dg1.png" alt=""></div>
+                <div class="item" style="--position: 2"><img src="./images/dg2.png" alt=""></div>
+                <div class="item" style="--position: 3"><img src="./images/dg3.png" alt=""></div> 
+                <div class="item" style="--position: 4"><img src="./images/dg4.png" alt=""></div> 
+                 <div class="item" style="--position: 5"><img src="./images/dg5.png" alt=""></div>
+                <div class="item" style="--position: 6"><img src="./images/dg6.png" alt=""></div>
+                <div class="item" style="--position: 7"><img src="./images/dg7.png" alt=""></div>
+                <div class="item" style="--position: 8"><img src="./images/dg8.png" alt=""></div>
+                <div class="item" style="--position: 9"><img src="./images/dg9.png" alt=""></div>
+             </div> 
+        </div>
+
+    </section>
+
+    <section id="Accessories"> <!-- Accessories-->
+        <div class="bg-[#1c7fc6] h-[20vh] md:h-[30vh]"><h1 class="text-center text-white font-light font-serif text-[2rem] md:text-[3rem] pt-[5%]" id="mername">ACCESSORIES</h1></div>
+
+        <div class="max-w-[100vw] mx-auto bg-black mt-0">
+    
+            <div id="default-carousel" class="relative" data-carousel="static">
+             
+                <div class="overflow-hidden relative h-[11rem] sm:h-64 xl:h-80 2xl:h-[70vh]">
+                   
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <!-- <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl ">Primer Slide</span> -->
+                        <img src="./images/col1.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 opacity-[0.6] " alt="..." id="accimage">
+                        <h1 class="absolute text-white  md:text-[3rem] left-[8%] top-[30%] font-semibold">Elevate Your game</h1>
+                        
+                        <p class="absolute text-white  md:left-[8%] top-[43%] text-[1.6rem] pt-[1rem] pr-[5%]">Xbox Wireless Controller - Sky Cipher Special Edition</p>
+                        <button class="absolute text-green-800  font-semibold bg-[#BBF712] border border-white hover:text-black  md:left-[8%] top-[57%] px-[1rem] text-[1.3rem]">Learn More</button>
+                        
+                    </div>
+                   
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./images/col2.jpg" class=" block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 opacity-[0.7]" alt="..." id="accimage">
+                        <h1 class="absolute text-white md:text-[3rem] left-[8%] top-[30%] font-semibold">Elevate Your game</h1>
+                        
+                        <p class="absolute text-white md:left-[8%] top-[43%] text-[1.6rem] pt-[1rem] pr-[5%]">Xbox Wireless Controller - Artic Camo Special Edition</p>
+                        <button class="absolute text-green-800 font-semibold bg-[#BBF712] border border-white hover:text-black  md:left-[8%] top-[57%] px-[1rem] text-[1.3rem]">Learn More</button>
+                        
+                    </div>
+                   
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./images/con4.png" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 opacity-[0.7]" alt="..." id="accimage">
+                        <h1 class="absolute text-white md:text-[3rem] left-[8%] top-[30%] font-semibold">Elevate Your game</h1>
+                        
+                        <p class="absolute text-white md:left-[8%] top-[43%] text-[1.6rem] pt-[1rem] pr-[5%]">Xbox Wireless Controller - Dream Vapor Special Edition</p>
+                        <button class="absolute text-green-800 font-semibold bg-[#BBF712] border border-white hover:text-black  md:left-[8%] top-[57%] px-[1rem] text-[1.3rem]">Learn More</button>
+                       
+                    </div>
+                </div>
+               
+                <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev >
+                    <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none" id="left">
+                        <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        
+                    </span>
+                </button>
+                <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 0 group-focus:ring-4 group-focus:ring-white  group-focus:outline-none" id="left">
+                        <svg class="w-5 h-5 text-white sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        
+                    </span>
+                </button>
+            </div>
+</div>
+    </section>
+
+    <section> <!--Accessories items-->
+        <div class=" bg-[#1c7fc6]  flex  flex-col  justify-center md:flex-row  gap-x-[1.5rem]">
+            <div class="bg-[#074070] w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/acc1.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button class="text-white bg-[#BBF712] md:ms-[1rem] mt-[1rem]" id="btn1">43% OFF</button>
+                <h2 class="text-white mx-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[2.5rem]">Sparkfox Thumb Grip 8</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:text-[1.3rem]">&#8377;399</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl px-[0.5rem] py-[0.2rem] text-[1rem] md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#074070]  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/acc2.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class="text-white bg-[#BBF712] md:mt-[1rem] ms-[1rem]">43% OFF</button>
+                <h2 class="text-white mx-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[2.5rem]">Sparkfox Thumb Grip 8</h2>
+                <h3 class="text-[#BBF712] font-semibold ms-[1rem] text-[1.3rem] md:ms-[1rem] ">&#8377;399</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#074070]  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/acc3.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class=" text-white bg-[#BBF712] mt-[1rem]  md:ms-[1rem]">23% OFF</button>
+                <h2 class="text-white mx-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[2.5rem]">Sparkfox Thumb Grip 4</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:ms-[1rem] text-[1.3rem]">&#8377;499</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#074070]  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/acc4.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class="text-white bg-[#BBF712] mt-[1rem]  md:ms-[1rem]">43% OFF</button>
+                <h2 class="text-white ms-[1rem] me-[2.2rem] text-[1.3rem] md:text-[1.2rem]">PlayStation5 - vertical Stand</h2>
+                <h3 class="text-[#BBF712] font-semibold ms-[1rem] text-[1.3rem] md:ms-[1rem] text-[1.3rem]">&#8377;2,590</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#074070]  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/acc5.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button class="text-white bg-[#BBF712] mt-[1rem]  md:ms-[1rem]" id="btn1">43% OFF</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem]">ORB 3M Controller Charge Cable</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:ms-[1rem] text-[1.3rem]">&#8377;399</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]" id="btn2">Add to Cart</button>
+            </div>
+        </div>
+        <div class=" bg-[#1c7fc6]  flex  flex-col  justify-center md:flex-row  gap-x-[1.5rem]">
+            <div class="bg[#074070] bg-black w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/acc6.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button class="text-white bg-orange-500 md:ms-[1rem] mt-[1rem]" id="btn1">15% OFF</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[2.5rem]">Dualsense Wireless Controller</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:text-[1.3rem]">&#8377;5,990</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl px-[0.5rem] py-[0.2rem] text-[1rem] md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg[#074070] bg-black  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/acc7.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class="text-white bg-orange-500 md:mt-[1rem] ms-[1rem]">15% OFF</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[2.5rem]">Dualsense Wireless Controller Cosmic</h2>
+                <h3 class="text-[#BBF712] font-semibold ms-[1rem] text-[1.3rem] md:ms-[1rem] ">&#8377;6,390</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg[#074070] bg-black  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/acc8.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class=" text-white bg-orange-500 mt-[1rem]  md:ms-[1rem]">20% OFF</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[2.5rem]">Dualsense Wireless Controller Grey</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:ms-[1rem] text-[1.3rem]">&#8377;6,390</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg[#074070] bg-black  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/acc9.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class="text-white bg-orange-500 mt-[1rem]  md:ms-[1rem]">10% OFF</button>
+                <h2 class="text-white ms-[1rem] me-[2.5rem] text-[1.3rem] md:text-[1.2rem]">Xbox Wireless Controller</h2>
+                <h3 class="text-[#BBF712] font-semibold ms-[1rem] text-[1.3rem] md:ms-[1rem] text-[1.3rem]">&#8377;4,999</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg[#074070] bg-black w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/acc10.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button class="text-white bg-orange-500 mt-[1rem]  md:ms-[1rem]" id="btn1">30% OFF</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem]">Dualsense Wireless Controller White</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:ms-[1rem] text-[1.3rem]">&#8377;5,990</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]" id="btn2">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="Merchandise"> <!-- Merchandise-->
+        <div class="bg-[#7b298e] h-[20vh] md:h-[30vh]"><h1 class="text-center text-white font-light font-serif text-[2rem]  md:text-[3rem] pt-[5%]" id="mername">MERCHANDISE</h1></div>
+        <div class="w-full h-[11rem] md:h-[70vh]"><img src="./images/merchandise.jpg" alt="" class="w-full h-[11rem] md:h-[70vh]"></div>
+    </section>
+
+    <section><!--Merchandise items-->
+        <div class="bg-[#7b298e] md:"><h1 class="text-white font-semibold text-[1.2rem] md:text-[2.5rem] py-[1rem] ps-[1.5rem]">PlayStation & Xbox Merch</h1></div>
+        <div class=" bg-[#7b298e]  flex  flex-col  justify-center md:flex-row  gap-x-[1.5rem]">
+            
+            <div class="bg-[#074070]  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/mer1.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button class="text-white bg-orange-500 md:ms-[1rem] mt-[1rem]" id="btn1">38% OFF</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[2.5rem]">PlayStation 5 Heat Change Mug</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:text-[1.3rem]">&#8377;799</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl px-[0.5rem] py-[0.2rem] text-[1rem] md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#074070]   w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/mer2.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class="text-white bg-orange-500 md:mt-[1rem] ms-[1rem]">20% OFF</button>
+                <h2 class="text-white mx-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[2.5rem]">PlayStation Glass PS5</h2>
+                <h3 class="text-[#BBF712] font-semibold ms-[1rem] text-[1.3rem] md:ms-[1rem] ">&#8377;799</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#074070]  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/mer3.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class=" text-white bg-orange-500 mt-[1rem]  md:ms-[1rem]">33% OFF</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[0rem]">PlayStation Backpack Buddy</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:ms-[1rem] text-[1.3rem]">&#8377;399</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#074070]   w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/mer4.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class="text-white bg-orange-500 mt-[1rem]  md:ms-[1rem]">47% OFF</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem]">Question Block 3D Icons Light V3</h2>
+                <h3 class="text-[#BBF712] font-semibold ms-[1rem] text-[1.3rem] md:ms-[1rem] text-[1.3rem]">&#8377;799</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#074070]  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/mer5.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button class="text-white bg-orange-500 mt-[1rem]  md:ms-[1rem]" id="btn1">33% OFF</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem]">Mario Kart Water Bottle Stainless Steel</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:ms-[1rem] text-[1.3rem]">&#8377;5,990</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]" id="btn2">Add to Cart</button>
+            </div>
+        </div>
+        <div class="bg-[#7b298e] md:"><h1 class="text-white font-semibold text-[1.2rem] md:text-[2.5rem] py-[1rem] ps-[1.5rem]">Cable Guys - Controller & Phone Holder</h1></div>
+        <div class=" bg-[#7b298e]  flex  flex-col  justify-center md:flex-row  gap-x-[1.5rem]">
+            <div class="bg-[#291f51] w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/mer6.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button class="text-white bg-[#BBF712] md:ms-[1rem] mt-[1rem]" id="btn1">15% OFF</button>
+                <h2 class="text-white mx-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[0rem]">Marvel:Thanos Cable Guys Controller</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:text-[1.3rem]">&#8377;2,499</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl px-[0.5rem] py-[0.2rem] text-[1rem] md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#291f51]  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/mer7.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class="text-white bg-[#BBF712] md:mt-[1rem] ms-[1rem]">15% OFF</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[2.5rem]">Marvel:The Amazing Spiderman</h2>
+                <h3 class="text-[#BBF712] font-semibold ms-[1rem] text-[1.3rem] md:ms-[1rem] ">&#8377;2,499</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#291f51]  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/mer8.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class=" text-white bg-[#BBF712] mt-[1rem]  md:ms-[1rem]">25% OFF</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[2.5rem]">Call of Duty:Monkey Bomb</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:ms-[1rem] text-[1.3rem]">&#8377;2,499</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#291f51]  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/mer9.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class="text-white bg-[#BBF712] mt-[1rem]  md:ms-[1rem]">20% OFF</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem]">Marvel:Deadpool Cable Guys Controller</h2>
+                <h3 class="text-[#BBF712] font-semibold ms-[1rem] text-[1.3rem] md:ms-[1rem] text-[1.3rem]">&#8377;2,590</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#291f51]  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/mer10.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button class="text-white bg-[#BBF712] mt-[1rem]  md:ms-[1rem]" id="btn1">15% OFF</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem]">Marvel:Loki Cable Guys Controller</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:ms-[1rem] text-[1.3rem]">&#8377;399</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-3xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]" id="btn2">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="Pre-order"> <!--Pre-order-->
+        <div class="bg-gray-500 h-[20vh] md:h-[30vh]"><h1 class="text-center text-white font-light font-serif text-[2rem]  md:text-[3rem] pt-[5%]" id="mername">PRE-ORDER</h1></div>
+        <div class="w-full h-[11rem] md:h-[70vh]"><img src="./images/preorder.jpg" alt="" class="w-full h-[11rem] md:h-[70vh]"></div>
+    </section>
+
+    <section> <!--Pre order item-->
+
+        <div class="bg-gray-500 md:"><h1 class="text-white font-semibold text-[1.2rem] md:text-[2.5rem] py-[1rem] ps-[1.5rem]">October 2024</h1></div>
+        <div class=" bg-gray-500  flex  flex-col  justify-center md:flex-row  gap-x-[1.5rem]">
+            
+            <div class="bg-[#074070]  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/pre1.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button class="text-white bg-orange-500 md:ms-[1rem] mt-[1rem]" id="btn1">PRE-ORDER OFFER</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[2.5rem]">Sonic X Shadows Generation</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:text-[1.3rem]">&#8377;3,499</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-xl px-[0.5rem] py-[0.2rem] text-[1rem] md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#074070]   w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/pre2.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class="text-white bg-orange-500 md:mt-[1rem] ms-[1rem]">PRE-ORDER OFFER</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[2.5rem]">Call of Duty:Black Ops 6</h2>
+                <h3 class="text-[#BBF712] font-semibold ms-[1rem] text-[1.3rem] md:ms-[1rem] ">&#8377;5,599</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#074070]  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/pre3.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class=" text-white bg-orange-500 mt-[1rem]  md:ms-[1rem]">PRE-ORDER OFFER</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem] pe-[0rem]">Test Drive Unlimited: Solar Crown  for PS5</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:ms-[1rem] text-[1.3rem]">&#8377;3,499</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.2rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#074070]   w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/pre4.png" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button id="btn1" class="text-white bg-orange-500 mt-[1rem]  md:ms-[1rem]">PRE-ORDER OFFER</button>
+                <h2 class="text-white mx-[1rem] text-[1.3rem] md:text-[1.2rem]">Dragon Ball:Sparking! ZERO</h2>
+                <h3 class="text-[#BBF712] font-semibold ms-[1rem] text-[1.3rem] md:ms-[1rem] text-[1.3rem]">&#8377;4,499</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]">Add to Cart</button>
+            </div>
+            <div class="bg-[#074070]  w-[36vh] border-2 border-white rounded-3xl md:w-[30vh] h-[50vh] my-[1rem]" id="acceitem">
+                <img src="./images/pre5.jpg" alt="" class="object-contain mx-auto w-[25vh] md:w-[20vh] mt-[0.8rem]">
+                <button class="text-white bg-orange-500 mt-[1rem]  md:ms-[1rem]" id="btn1">PRE-ORDER OFFER</button>
+                <h2 class="text-white ms-[1rem] text-[1.3rem] md:text-[1.2rem]">Life is Strange:Double Exposure</h2>
+                <h3 class="text-[#BBF712] font-semibold text-[1.3rem] ms-[1rem] md:ms-[1rem] text-[1.3rem]">&#8377;3,499</h3>
+                <button id="btn2" class="text-white bg-sky-400 rounded-xl md:px-[1rem] py-[0.3rem] ms-[20%] text-xl mt-[0.5rem]" id="btn2">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contact" class="md:relative">
+    <div class=" bg-black  flex  md:flex-row justify-center gap-x-[2.5rem] h-[57vh] pt-[5rem]" id="contactitem">
+        <div class="md:w-[40vh] h-[40vh] my-[1rem] product" id="item1">
+            <h3 class="text-[#BBF712] underline underline-offset-8 underline-thick md:text-[1.3rem] ">OUR PRODUCTS</h3>
+          <div class="text-white mt-[1rem] leading-8 md:text-[1.1rem]" id="headings">
+                <h4 >PlayStation</h4>
+                <h4>Xbox</h4>
+                <h4>Digital</h4>
+                <h4>Merchandise</h4>
+                <h4>Pre Order</h4>
+          </div>
+        </div>
+        <div class=" md:w-[40vh] h-[50vh] my-[1rem]" id="item1">
+            <h3 class="text-[#BBF712] underline underline-offset-8 underline-thick md:text-[1.3rem] ">COMPANY</h3>
+            <div class="text-white  mt-[1rem] leading-8 md:text-[1.1rem]" id="headings">
+                <h4>Home</h4>
+                <h4>About Us</h4>
+                <h4>Contact Us</h4>
+                <h4>Store Locator</h4>
+            </div>
+        </div>
+        <div class="md:w-[40vh] h-[50vh] my-[1rem]" id="item1">
+            <h3 class="text-[#BBF712] underline underline-offset-8 underline-thick md:text-[1.3rem] ">CUSTOMER SERVICES</h3>
+            <div class="text-white  mt-[1rem] leading-8 md:text-[1.1rem]" id="headings">
+                <h4>Help/FAQ</h4>
+                <h4>Refund $Return</h4>
+                <h4>Privacy Policy</h4>
+                <h4>Terms & Conditions</h4>
+                <h4>Shipping Policy</h4>
+            </div>
+            
+        </div>
+        <div class="md:w-[40vh] h-[50vh] my-[1rem]" id="item1">
+            <h3 class="text-[#BBF712] underline underline-offset-8 underline-thick md:text-[1.3rem] ">MY ACCOUNT</h3>
+            <div class="text-white  mt-[1rem] leading-8 md:text-[1.1rem]" id="headings">
+                <h4>Track Order</h4>
+                <h4>Cart</h4>
+                <h4>Wishlist</h4>
+                <h4>Address</h4>
+                <h4>Orders</h4>
+            </div>
+            
+        </div>
+        
+    </div>
+   <div id="Connectitem">
+        <h2 class="text-white md:absolute md:bottom-[15%] left-[70%] text-[1.6rem]" id="connect">Connect With Us</h2>
+        <img src="./images/whatsapp.png" alt="" class=" md:absolute md:bottom-[15%] left-[84%] size-[2rem] ">
+        <img src="./images/fb.png" alt="" class=" md:absolute md:bottom-[15%] left-[87%] size-[2rem]">
+        <img src="./images/insta.png" alt="" class=" md:absolute md:bottom-[15%] left-[90%] size-[2rem]">
+        <img src="./images/X_white.png" alt="" class=" md:absolute md:bottom-[15%] left-[93%] size-[2rem] ">
+        <img src="./images/horizontal-line-3.svg" alt="" class="hidden md:absolute mx-[4.8rem] w-[90.5%] md:bottom-[10%] md:block">
+        <img src="./images/horizontal-line-3.svg" alt="" class="hidden md:absolute mx-[4.8rem] w-[90.5%] md:bottom-[85%] md:block ">
+   </div>
+    </section>
+    <footer class="bg-black"><p class="text-white text-[0.7rem] text-center md:text-[1rem] py-[1rem]">Copyright © 2034 PlayMax Pvt. Ltd. All rights reserved</p></footer>
+</body>
+<script>
+    const navLinks = document.querySelector('.nav-links')
+    function onToggleMenu(e){
+        e.name = e.name === 'menu' ? 'close' : 'menu'
+        navLinks.classList.toggle('top-[7%]')
+    }
+  </script>
+  
+ <script>
+        const more = document.getElementById('more');
+        const divToDisplay = document.getElementById('div-to-display');
+    
+    
+        more.addEventListener('click', () => {
+      
+      divToDisplay.classList.toggle('hidden');
+    });
+ </script>
+ <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+ <script type="module" src="script.js"></script>
+  
+</html>

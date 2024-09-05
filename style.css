@@ -1,0 +1,393 @@
+*{
+    font-family: "Mingzat"
+}
+.slider{
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
+}
+.slider .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.digi>.item{
+    top: 2.5rem;
+   padding-bottom: 2rem;
+}
+#digislide{
+    /* mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    ); */
+    mask-image: none;
+    
+    
+}
+
+
+
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+.slider:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+}
+.slider .item:hover{
+    filter: grayscale(0);
+}
+.slider[reverse="true"] .item{
+    animation: reversePlay 10s linear infinite;
+}
+@keyframes reversePlay{
+    from{
+        left: calc(var(--width) * -1);
+    }to{
+        left: 100%;
+    }
+}
+
+@media(min-width:1024px){
+    #image{
+       height: 80vh;
+       object-fit: fill;
+    }
+}
+
+.underline-thick{
+    text-decoration-thickness: 3px;
+}
+@media(min-width:330px) and (max-width:450px){
+
+#search{
+width: 30vh;
+height: 2rem;
+margin-left: 2%;
+font-size: 0.5rem;
+z-index: 0;
+}
+#logo{
+    width: 80px;
+    margin-top: 0px;
+}
+#links>ul{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 1rem 0px;
+    font-size: 1rem;
+}
+#links{
+    margin-top: 20px;
+    background-color: rgb(154, 150, 150);
+    
+}
+#links>ul>li{
+    margin-top: -0.5rem;
+}
+#icon{
+    display: none;
+}
+#more{
+    display: none;
+}
+#bgcont{
+    /* background-color: black; */
+    width: 25vh;
+    height: 25vh;
+    left: 8%;
+    top: 18%;
+}
+#BG{
+    height: 25vh; 
+}
+#bgcont>h1{
+font-size: 0.8rem;
+margin-top: 2.3rem;
+padding: 0.5rem 0px;
+}
+#bgcont>p{
+    font-size: 0.4rem;
+    padding-right: 2rem;
+}
+#bgcont>button{
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.5rem;
+}
+#sec2{
+    margin-top: 2rem;
+   display: grid;
+   grid-template-rows: repeat(5,1fr);
+}
+#sec2>div{
+    width: 35vh;
+    /* margin: auto; */
+}
+
+#cons>h1{
+    margin-top: -90%;
+    margin-left: 0px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+#cons>h1>span{
+    display: inline;
+}
+#cons>img{
+    margin-top: 40%;
+    margin-left: 15%;
+    object-fit: fill;
+    width: 25vh;
+    height: 20vh;
+}
+#merc>h1{
+    margin-top: -80%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+#merc>img{
+    width: 25vh;
+    height: 20vh;
+    margin-left: 15%;
+    object-fit: cover;
+}
+#digi>h1{
+    margin-top: -80%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+#digi>img{
+    width: 25vh;
+    height: 20vh;
+    margin-left: 15%;
+    object-fit: cover;
+}
+#gam{
+   margin-left: 0%;
+}
+#gam>h1{
+    margin-top: -90%;
+    font-size: 1.5rem;
+    padding-left: 10%;
+}
+#gam>img{
+    width: 25vh;
+    height: 20vh;
+    margin-left: 15%;
+    margin-top: 40%;
+    object-fit: cover;
+}
+#acc>h1{
+    margin-top: -80%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+#acc>img{
+    width: 25vh;
+    height: 20vh;
+    margin-left: 15%;
+    object-fit: cover;
+}
+#cons{
+    margin: auto;
+}
+#merc,#digi,#gam,#acc{
+    margin-left: 13%;
+    margin-top: 1rem;
+}
+#left{
+   width:1rem ;
+   height:1rem ;
+   background: transparent;
+}
+#play{
+    width: 30vh;
+}
+#image~h1{
+font-size: 1rem;
+left: 14%;
+
+}
+#image~h3{
+    font-size:16px;
+    left: 35%;
+}
+#image~h3>span{
+    font-size: 10px;
+}
+#image~p{
+    font-size: 8px;
+    left: 35%;
+    padding-top: 1.5rem;
+    padding-right: 1.8rem;
+    
+}
+#image~button{
+    font-size: 10px;
+    left: 35%;
+    margin-top: 3rem;
+}
+#image~div>img{
+    width: 10vh;
+    height: 13vh;
+}
+#image~div{
+    left: 12%;
+    top: 28%;
+}
+#image{
+    opacity: 0.4;
+}
+#xbox{
+    width: 20vh;
+    padding-top: 5%;
+    /* height: 25vh; */
+    
+}
+#xBG{
+    height: 20vh;
+    width: 100%;
+}
+#digislide{
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+#diginame{
+    padding-top: 2.2rem;
+}
+
+#accimage~h1{
+    font-size: 1.2rem;
+    left: 14%;
+    top: 25%;
+    
+    }
+   
+    #accimage~p{
+        font-size: 12px;
+        left: 14%;
+        top: 36%;
+        padding-right: 2rem;
+        /* padding-top: 1.5rem; */
+        
+    }
+    #accimage~button{
+        font-size: 10px;
+        left: 14%;
+        margin-top: 2rem;
+    }
+    #accimage{
+        opacity: 0.4;
+    }
+    #acceitem{
+        margin-left: 13%;
+        height: 50vh;
+    }
+    #acceitem>img{
+        margin-bottom: 1rem;
+        height: 25vh;
+    }
+    #btn1{
+        font-size: 1rem;
+        margin-top: 0px;
+        margin-left: 8%;
+    }
+    #btn2{
+        font-size: 1rem;
+        margin-top: -10px;
+        margin-left: 30%;
+        padding: 0.2rem 0.5rem;
+    }
+    #mername{
+        padding-top: 10%;
+    }
+    #Contact{
+        position: none;
+        height: 100%;
+        width: 100%;
+    }
+    #contactitem{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding-top: 2rem;
+        
+
+    }
+    .product{
+        border-top: solid white 2px;
+        padding-top: 1rem;
+        
+    }
+    #item1{
+        height: 50vh;
+       
+        margin-top: 0px;
+       
+        padding-left: 5%;
+        
+        border-bottom: solid white 2px;
+        
+
+    }
+    #item1>h3{
+        padding-top: 1rem;
+        font-size: 1.5rem;
+        
+    }
+    #headings{
+        padding-top: 1rem;
+        font-size: 1.3rem;
+        line-height: 2;
+    }
+    #Connectitem{
+        display: flex;
+        background-color: black;
+        border-bottom: solid white 2px;
+        padding-bottom: 1rem;
+    }
+    #connect{
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+    #connect~img{
+       width: 1.5rem;
+       height: 1.5rem;
+       margin-left: 1rem;
+       margin-top: 1.2rem;
+    }
+
+}
